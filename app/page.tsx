@@ -1,113 +1,95 @@
-import Image from "next/image";
+'use client'
 
-export default function Home() {
+import { useState } from "react"
+import Image from "next/image"
+
+// react icons
+import { MdEmail as Email, MdPhoneIphone as Phone, MdCalendarMonth as Calendar, MdLocationOn as Location } from "react-icons/md";
+
+
+const page = () => {
+  const [about, setAbout] = useState<boolean>(true)
+  const [resume, setResume] = useState<boolean>(false)
+  const [portfolio, setPortfolio] = useState<boolean>(false)
+  const [contact, setContact] = useState<boolean>(false)
+
+  const [isHovered, setIsHovered] = useState<boolean>(false)
+
+  const otherInfo = [
+    {
+      icon: <Email className='text-yellow-200 2xl:text-xl xl:text-sm' />,
+      label: 'EMAIL',
+      value: 'espineda.ryanmiguel.c200571@gmail.com'
+    },
+    {
+      icon: <Phone className='text-yellow-200 2xl:text-xl xl:text-sm' />,
+      label: 'PHONE',
+      value: '+639760887623'
+    },
+    {
+      icon: <Calendar className='text-yellow-200 2xl:text-xl xl:text-sm' />,
+      label: 'BIRTHDAY',
+      value: 'January 31, 2002'
+    },
+    {
+      icon: <Location className='text-yellow-200 2xl:text-xl xl:text-sm' />,
+      label: 'ADDRESS',
+      value: 'Tulay na Patpat, Ibaan, Batangas'
+    }
+  ]
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="h-screen w-screen px-[3rem] py-[1.5rem] bg-[#111]">
+      <div className="flex justify-between 2xl:gap-6 xl:gap-3 h-full w-full p-[3rem] overflow-auto">
+        <div className="flex flex-col justify-between items-center 2xl:gap-8 xl:gap-6 sticky top-0 shadow-md border border-[#2a2a2a] rounded-3xl w-[20%] h-full bg-[#1e1e1e] 2xl:p-[2rem] xl:p-[1rem]">
+          <div className="flex flex-col justify-between items-center gap-2 h-[50%] w-full">
+            {/* Personal Info */}
+            <div className="flex justify-center items-center h-[60%] w-[80%]">
+              <Image
+                src='/img/grad_pic.jpg'
+                alt="applicant-photo"
+                width={500}
+                height={500}
+                className="h-full w-full rounded-3xl object-cover object-top"
+              />
+            </div>
+            <div className="2xl:text-2xl text-center font-extrabold text-[#e0e0e0] xl:text-xl">
+              Ryan Miguel M. Espineda {/* Name of the applicant */}
+            </div>
+            <div className="flex justify-center items-center bg-[#2b2b2b] py-[.5rem] px-[1rem] rounded-md 2xl:text-sm text-center font-semibold xl:text-xs">
+              Frontend Web Developer
+            </div>
+          </div>
+          <div className="h-[2px] w-full flex items-center bg-[#393939]">
+            {/* horizontal line */}
+          </div>
+          <div className="flex flex-col justify-between items-center 2xl:gap-4 h-[50%] w-full 2xl:p-2 xl:gap-0 xl:p-0" 
+            onMouseEnter={() => setIsHovered(true)} 
+            onMouseLeave={() => setIsHovered(false)}>
+            {otherInfo.map((info) => (
+              <div className="flex justify-between gap-2 2xl:h-[20%] xl:h-[30%] w-full p-2">
+                <div className="flex justify-center items-center h-full w-[20%] bg-[#201f21] border border-[#2a2a2a] rounded-lg">
+                  {info.icon}
+                </div>
+                <div className="flex flex-col w-[80%] justify-between p-[2px]">
+                  <div className="2xl:text-xs text-[#b2b2b2] xl:text-[.5rem]">
+                    {info.label}
+                  </div>
+                  <div className={`relative overflow-ellipsis ${isHovered ? '' : 'overflow-hidden'} 2xl:text-xs xl:text-[.5rem]`}>
+                    {info.value}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className='shadow-md border border-[#2a2a2a] rounded-3xl w-[80%] min-h-[calc(100%+5rem)] bg-[#1e1e1e] p-[2rem]'>
+          {/* replaceable content */}
+          80%
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+    </div>
+  )
 }
+
+export default page

@@ -5,3 +5,47 @@
 body {
     color: white;
 }
+
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+
+/* just put "visiblesb" on the className to overwrite the width and height of a scrollbar */
+.visiblesb::-webkit-scrollbar {
+    width: 10px !important;
+    height: 10px !important;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #242424;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff292;
+    border-radius: 100vh;
+    height: 1px;
+    width: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7a3f9c;
+    cursor: pointer;
+}
+
+/* This is to decrease the start of the scrollbar track */
+::-webkit-scrollbar-button:start:increment {
+    width: 20%;
+    background: transparent;
+}
+
+/* This is to decrease the end of the scrollbar track */
+::-webkit-scrollbar-button:end:increment {
+    width: 20%;
+    background: transparent;
+}

@@ -17,7 +17,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body className={inter.className}>
       <div className="h-screen w-screen px-[3rem] py-[1.5rem] bg-[#111]">
-        <div className="flex justify-between 2xl:gap-6 xl:gap-3 h-full w-full p-[3rem] overflow-auto">
+        <div className="flex justify-between 2xl:gap-6 xl:gap-3 h-full w-full p-[3rem] overflow-y-auto invisiblesb">
           <Profile />
           <div className='relative shadow-md border border-[#2a2a2a] rounded-3xl min-h-full w-[80%] self-start bg-[#1e1e1e] p-[2rem]'>
             <Navbar />

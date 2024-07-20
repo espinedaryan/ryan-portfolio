@@ -2,6 +2,8 @@ import { GoCodeReview as WebDeveloper } from "react-icons/go";
 import { SiAdobepremierepro as PremierePro } from "react-icons/si";
 import { DiPhotoshop as Photoshop } from "react-icons/di";
 import { IoGameControllerOutline as Gaming } from "react-icons/io5";
+import { FaFacebookF as Facebook, FaAmazon as Amazon, FaApple as Apple, FaGoogle as Google, FaMicrosoft as Microsoft, } from "react-icons/fa";
+import { RiNetflixFill as Netflix } from "react-icons/ri";
 
 import Image from "next/image";
 
@@ -39,11 +41,69 @@ const About = () => {
       img: '/img/sir-zeff.jpg',
       name: 'Zeff Somers',
       value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nostrum omnis earum dolore nisi?'
+    },
+    {
+      img: '/img/sir-zeff.jpg',
+      name: 'Zeff Somers',
+      value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nostrum omnis earum dolore nisi?'
+    },
+    {
+      img: '/img/sir-zeff.jpg',
+      name: 'Zeff Somers',
+      value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nostrum omnis earum dolore nisi?'
+    },
+    {
+      img: '/img/sir-zeff.jpg',
+      name: 'Zeff Somers',
+      value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nostrum omnis earum dolore nisi?'
+    }
+  ]
+
+  const Clients = [
+    {
+      icon: <Facebook />,
+      name: 'Facebook'
+    },
+    {
+      icon: <Amazon />,
+      name: 'Amazon'
+    },
+    {
+      icon: <Apple />,
+      name: 'Apple'
+    },
+    {
+      icon: <Netflix />,
+      name: 'Netflix'
+    },
+    {
+      icon: <Google />,
+      name: 'Google'
+    },
+    {
+      icon: <Microsoft />,
+      name: 'Microsoft'
+    },
+    {
+      icon: <Netflix />,
+      name: 'Netflix'
+    },
+    {
+      icon: <Microsoft />,
+      name: 'Microsoft'
+    },
+    {
+      icon: <Netflix />,
+      name: 'Netflix'
+    },
+    {
+      icon: <Microsoft />,
+      name: 'Microsoft'
     }
   ]
 
   return (
-    <div className='flex flex-col gap-6 justify-between items-start'>
+    <div className='flex flex-col gap-6 justify-between items-start w-full'>
       <div className="flex flex-col gap-3 justify-between items-start">
         <h1 className='text-3xl font-bold'>
           About Me
@@ -78,10 +138,10 @@ const About = () => {
       <h2 className='text-xl font-bold mt-4'>
         Testimonials
       </h2>
-      <div className="grid grid-cols-3 gap-3 gap-y-6 w-full">
-        {/* To be mapped */}
+      <div className="flex justify-start items-center gap-3 w-full overflow-x-auto">
+        {/* To be mapped "Testimonials" */}
         { Testimonials.map((review) => (
-          <div className="relative flex justify-between gap-3 p-6 pt-12 rounded-lg shadow-md bg-[#171717] mt-4">
+          <div className="relative flex flex-shrink-0 justify-between gap-3 p-6 pt-12 rounded-lg shadow-md bg-[#171717] w-full mt-6 xl:w-1/2 2xl:w-1/3 mb-10">
             <div className="absolute left-6 top-[-1.5rem] h-16 w-16 flex justify-between items-end gap-4">
               <Image
                 src={ review.img }
@@ -96,6 +156,22 @@ const About = () => {
             </div>
             <div className="text-[#b2b2b2] text-justify text-sm">
               { review.value }
+            </div>
+          </div>
+        )) }
+      </div>
+      <h2 className="text-xl font-bold mt-4">
+        Clients
+      </h2>
+      <div className="flex justify-start items-center gap-6 w-full overflow-x-auto">
+        {/* To be mapped "Clients" */}
+        { Clients.map((client) => (
+          <div className="flex justify-between items-center gap-2 w-1/8 p-6 rounded-2xl bg-[#2a2a2a] shadow-sm mb-12">
+            <div className="text-4xl">
+              { client.icon }
+            </div>
+            <div className="font-semibold text-lg">
+              { client. name }
             </div>
           </div>
         )) }

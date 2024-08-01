@@ -4,6 +4,12 @@
 
 body {
     color: white;
+    font-family: Poppins;
+}
+
+:root {
+    --text-main: #d6d6d6;
+    --text-header: #fafafa;
 }
 
 /* just put "visiblesb" on the className to overwrite the width and height of a scrollbar */

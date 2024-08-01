@@ -126,12 +126,12 @@ const About = () => {
   ]
 
   return (
-    <div className='flex flex-col gap-6 justify-between items-start w-full'>
+    <div className='fade-in-animation flex flex-col gap-6 justify-between items-start w-full'>
       <div className="flex flex-col gap-3 justify-between items-start">
         <h1 className='text-3xl font-bold text-[var(--text-header)]'>
           About Me
         </h1>
-        <div className='h-1.5 w-12 bg-yellow-200'></div>
+        <div className='h-1.5 w-12 bg-yellow-200 rounded-3xl'></div>
       </div>
       <div className="text-[var(--text-main)] text-justify">
         I'm an aspiring web developer passionate about creating awesome digital experiences. Proficient in HTML, CSS, JavaScript, React.js and Next.js, I thrive on solving problems and paying attention to the nitty-gritty details.
@@ -190,7 +190,7 @@ const About = () => {
             <div className={`${selectedReview ? '' : 'hidden'} fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-screen w-screen bg-black opacity-15`}>  {/* Darken Background */}
 
             </div>
-            <div className={`${selectedReview ? '' : 'hidden'} flex flex-col gap-3 fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rounded-2xl p-7 w-[30%] bg-[#2a2a2a]`}>
+            <div className={`${selectedReview ? '' : 'hidden'} scale-up-modal-animation flex flex-col gap-3 fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rounded-2xl p-7 w-[30%] bg-[#2a2a2a]`}>
               {/* Display the clicked review */}
               <CloseButton className="absolute top-2 right-2 p-1 bg-[#1d1d1d] rounded-md text-[var(--text-main)] hover:text-white hover:bg-[#3e3e3e] text-base h-8 w-8" onClick={() => setSelectedReview(undefined)} />
               <div className="flex gap-8">

@@ -2,12 +2,12 @@ import { GoBook as Book } from "react-icons/go";
 
 const Resume = () => {
   return (
-    <div className='flex flex-col gap-6 justify-between items-start w-full'>
+    <div className='fade-in-animation flex flex-col gap-6 justify-between items-start w-full'>
       <div className="flex flex-col gap-3 justify-between items-start">
         <h1 className='text-3xl font-bold'>
           Resume
         </h1>
-        <div className='h-1.5 w-12 bg-yellow-200'></div>
+        <div className='h-1.5 w-12 bg-yellow-200 rounded-3xl'></div>
       </div>
       {/* Relevant Experience */}
       <div className='ml-[45px] flex flex-col gap-8'>

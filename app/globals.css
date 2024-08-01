@@ -12,6 +12,46 @@ body {
     --text-header: #fafafa;
 }
 
+@keyframes scaleUpModal /* For modal only */ {
+    from {
+        transform: scale(0.6) translate(-50%, -50%);
+    }
+    to {
+        transform: scale(1) translate(-50%, -50%);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.6);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.scale-up-modal-animation {
+    animation: scaleUpModal 0.15s ease-in-out;
+    transform-origin: left;
+}
+
+.scale-up-animation {
+    animation: scaleUp 0.2s ease-in-out both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in-animation {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
 /* just put "visiblesb" on the className to overwrite the width and height of a scrollbar */
 .invisiblesb::-webkit-scrollbar {
     width: 10px !important;

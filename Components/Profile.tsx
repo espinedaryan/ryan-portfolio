@@ -62,7 +62,7 @@ const Profile = () => {
         onMouseLeave={() => setIsHovered(false)}>
         {otherInfo.map((info) => (
           <div className="flex justify-between gap-2 2xl:h-[20%] xl:h-[30%] w-full p-2">
-            <div className="flex justify-center items-center h-[4vmin] w-[20%] bg-[#201f21] border border-[#2a2a2a] rounded-lg">
+            <div className="flex justify-center items-center h-[4vmin] w-[20%] bg-[#272727] border border-[#2a2a2a] shadow-md rounded-lg">
               {info.icon}
             </div>
             <div className="flex flex-col w-[80%] justify-between p-[2px]">

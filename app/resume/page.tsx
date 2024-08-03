@@ -32,7 +32,7 @@ const Resume = () => {
           <div className="text-[#afafaf] italic mt-1">
             Tech Stacks Used: NextJS, TailwindCSS, TypeScript, Git, GitHub
           </div>
-          <div className="text-[#e6e6e6] text-sm mt-1 text-justify">
+          <div className="text-[#e6e6e6] w-2/3 text-sm mt-1 text-justify">
             Developed responsive components to ensure seamless user experiences by collaborating closely with design and development teams and translating mockups into functional web interfaces while maintaining consistency across devices and browsers.
           </div>
         </div>
@@ -49,7 +49,7 @@ const Resume = () => {
           <div className="text-[#afafaf] italic mt-1">
             Tech Stacks Used: HTML, CSS, JavaScript, Adobe Photoshop, Git, GitHub
           </div>
-          <div className="text-[#e6e6e6] text-sm mt-1 text-justify">
+          <div className="text-[#e6e6e6] w-2/3 text-sm mt-1 text-justify">
             Contributed to the overall game design of a JavaScript learning tool by coding the game logic, developing unique characters, and integrating coding tasks within the tower defense mechanics. Focused on creating an engaging and educational experience, balanced difficulty, and ensured a bug-free game through extensive debugging and testing, while collaborating closely with the team.
           </div>
         </div>
@@ -66,7 +66,7 @@ const Resume = () => {
           <div className="text-[#afafaf] italic mt-1">
             Tech Stacks Used: NextJS, CSS, TypeScript, Supabase, Git, GitHub
           </div>
-          <div className="text-[#e6e6e6] text-sm mt-1 text-justify">
+          <div className="text-[#e6e6e6] w-2/3 text-sm mt-1 text-justify">
             Implemented user-friendly and visually appealing frontend designs focused on usability and user experience, and collaborated with team members to integrate frontend and backend components for a cohesive and efficient system.
           </div>
         </div>

@@ -22,22 +22,22 @@ const About = () => {
 
   const WhatImDoing = [
     {
-      icon: <WebDeveloper className="text-4xl text-yellow-200" />,
+      icon: <WebDeveloper className="text-4xl text-yellow-200 w-[3.5rem]" />,
       label: 'Frontend Web Development',
       value: 'Build and design the user interface and experience of websites and web applications.'
     },
     {
-      icon: <PremierePro className="text-4xl text-yellow-200" />,
+      icon: <PremierePro className="text-4xl text-yellow-200 w-[3.5rem]" />,
       label: 'Film Editing',
       value: 'Cuts and assembles video footage, adding effects and sound to enhance the final story.'
     },
     {
-      icon: <Photoshop className="text-4xl text-yellow-200" />,
+      icon: <Photoshop className="text-4xl text-yellow-200 w-[3.5rem]" />,
       label: 'Graphic Designing',
       value: 'Creates visual content like logos and layouts to communicate ideas effectively.'
     },
     {
-      icon: <Gaming className="text-4xl text-yellow-200" />,
+      icon: <Gaming className="text-4xl text-yellow-200 w-[3.5rem]" />,
       label: 'Gaming',
       value: 'Plays and explores video games to enjoy immersive experiences and achieve in-game goals.'
     }
@@ -133,7 +133,7 @@ const About = () => {
         </h1>
         <div className='h-1.5 w-12 bg-yellow-200 rounded-3xl'></div>
       </div>
-      <div className="text-[var(--text-main)] text-justify">
+      <div className="text-[var(--text-main)] text-justify text-sm md:text-base">
         I'm an aspiring web developer passionate about creating awesome digital experiences. Proficient in HTML, CSS, JavaScript, React.js and Next.js, I thrive on solving problems and paying attention to the nitty-gritty details.
         <br />
         <br />
@@ -142,16 +142,16 @@ const About = () => {
       <h2 className='text-xl font-bold mt-4 text-[var(--text-header)]'>
         What I'm Doing
       </h2>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3">
         {/* A reusable component */}
         { WhatImDoing.map((doing) => (
-          <div className="flex justify-between gap-3 p-4 rounded-lg shadow-md bg-[#171717]">
+          <div className="flex gap-3 p-4 rounded-lg shadow-md bg-[#171717] hover:bg-[#252525]">
             { doing.icon }
             <div className="flex flex-col gap-2">
-              <div className="font-semibold text-lg">
+              <div className="font-semibold text-sm lg:text-lg line-clamp-1 hover:line-clamp-none">
                 { doing.label }
               </div>
-              <div className="text-[var(--text-main)] text-justify text-sm">
+              <div className="text-[var(--text-main)] text-justify text-xs line-clamp-2 hover:line-clamp-none lg:text-sm">
                 { doing.value }
               </div>
             </div>
@@ -188,9 +188,9 @@ const About = () => {
             </div>
             {/* Modal */}
             <div className={`${selectedReview ? '' : 'hidden'} fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-screen w-screen bg-black opacity-15`}>  {/* Darken Background */}
-
+              {/* Dark Background */}
             </div>
-            <div className={`${selectedReview ? '' : 'hidden'} scale-up-modal-animation flex flex-col gap-3 fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rounded-2xl p-7 w-[30%] bg-[#2a2a2a]`}>
+            <div className={`${selectedReview ? '' : 'hidden'} scale-up-modal-animation flex flex-col gap-3 fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rounded-2xl p-7 w-[85%] sm:w-[70%] md:w-[56vmin] bg-[#2a2a2a]`}>
               {/* Display the clicked review */}
               <CloseButton className="absolute top-2 right-2 p-1 bg-[#1d1d1d] rounded-md text-[var(--text-main)] hover:text-white hover:bg-[#3e3e3e] text-base h-8 w-8" onClick={() => setSelectedReview(undefined)} />
               <div className="flex gap-8">

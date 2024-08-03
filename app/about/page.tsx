@@ -128,7 +128,7 @@ const About = () => {
   return (
     <div className='fade-in-animation flex flex-col gap-6 justify-between items-start w-full'>
       <div className="flex flex-col gap-3 justify-between items-start">
-        <h1 className='text-3xl font-bold text-[var(--text-header)]'>
+        <h1 className='text-2xl xl:text-3xl font-bold text-[var(--text-header)]'>
           About Me
         </h1>
         <div className='h-1.5 w-12 bg-yellow-200 rounded-3xl'></div>
@@ -139,7 +139,7 @@ const About = () => {
         <br />
         I'm always eager to learn and stay updated on the latest tech trends. With a collaborative spirit and a growth mindset, I'm excited to contribute my skills to innovative projects and continue my journey in the ever-evolving world of web development.
       </div>
-      <h2 className='text-xl font-bold mt-4 text-[var(--text-header)]'>
+      <h2 className='text-lg xl:text-xl font-bold mt-4 text-[var(--text-header)]'>
         What I'm Doing
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3">
@@ -158,7 +158,7 @@ const About = () => {
           </div>
         ))}
       </div>
-      <h2 className='text-xl font-bold mt-4 text-[var(--text-header)]'>
+      <h2 className='text-lg xl:text-xl font-bold mt-4 text-[var(--text-header)]'>
         Testimonials
       </h2>
       <div className="flex justify-start items-center gap-3 w-full overflow-x-auto">
@@ -222,7 +222,7 @@ const About = () => {
           </div>
         )) }
       </div>
-      <h2 className="text-xl font-bold mt-4 text-[var(--text-header)]">
+      <h2 className="text-lg xl:text-xl font-bold mt-4 text-[var(--text-header)]">
         Clients
       </h2>
       <div className="flex justify-start items-center gap-6 w-full overflow-x-auto">

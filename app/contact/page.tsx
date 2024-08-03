@@ -46,7 +46,7 @@ const Contact = () => {
             className='w-full h-full rounded-3xl'>
           </iframe>
         </div>
-        <h2 className='text-xl font-bold mt-4 text-[var(--text-header)]'>
+        <h2 className='text-lg xl:text-xl font-bold mt-4 text-[var(--text-header)]'>
           Contact Form
         </h2>
         <form onSubmit={handleSubmit} className='w-full'>

@@ -124,7 +124,7 @@ const Portfolio = () => {
         )) }
       </div>
       {/* Projects Display */}
-      <div className="grid 2xl:grid-cols-5 xl:grid-cols-3 gap-8 w-full">
+      <div className="grid sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 gap-8 w-full">
         { FilteredProjects.map((project) => (
           <div className="scale-up-animation group flex flex-col gap-4 cursor-pointer">
             <div className="relative w-full h-[10rem] overflow-hidden rounded-xl">

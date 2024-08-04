@@ -16,22 +16,26 @@ const Profile = () => {
     {
       icon: <Email className='text-yellow-200 h-[1.5rem] w-[1.5rem] text-xl 2xl:text-xl xl:text-sm' />,
       label: 'EMAIL',
-      value: 'espineda.ryanmiguel.c200571@gmail.com'
+      value: 'espineda.ryanmiguel.c200571@gmail.com',
+      id: 1
     },
     {
       icon: <Phone className='text-yellow-200 h-[1.5rem] w-[1.5rem] text-xl 2xl:text-xl xl:text-sm' />,
       label: 'PHONE',
-      value: '+639760887623'
+      value: '+639760887623',
+      id: 2
     },
     {
       icon: <Calendar className='text-yellow-200 h-[1.5rem] w-[1.5rem] text-xl 2xl:text-xl xl:text-sm' />,
       label: 'BIRTHDAY',
-      value: 'January 31, 2002'
+      value: 'January 31, 2002',
+      id: 3
     },
     {
       icon: <Location className='text-yellow-200 h-[1.5rem] w-[1.5rem] text-xl 2xl:text-xl xl:text-sm' />,
       label: 'ADDRESS',
-      value: 'Tulay na Patpat, Ibaan, Batangas'
+      value: 'Tulay na Patpat, Ibaan, Batangas',
+      id: 4
     }
   ]
   return (
@@ -65,7 +69,7 @@ const Profile = () => {
         onMouseEnter={() => setIsHovered(true)} 
         onMouseLeave={() => setIsHovered(false)}>
         {otherInfo.map((info) => (
-          <div className="flex justify-between gap-2 2xl:h-[20%] xl:h-[30%] w-full p-2">
+          <div key={ info.id } className="flex justify-between gap-2 2xl:h-[20%] xl:h-[30%] w-full p-2">
             <div className="flex justify-center items-center p-2 bg-[#272727] border border-[#2a2a2a] shadow-md rounded-lg">
               {info.icon}
             </div>

@@ -16,6 +16,7 @@ const About = () => {
     name: string;
     position: string;
     value: string;
+    id: number;
   }
 
   const [selectedReview, setSelectedReview] = useState<Review>()
@@ -24,22 +25,26 @@ const About = () => {
     {
       icon: <WebDeveloper className="text-4xl text-yellow-200 w-[3.5rem]" />,
       label: 'Frontend Web Development',
-      value: 'Build and design the user interface and experience of websites and web applications.'
+      value: 'Build and design the user interface and experience of websites and web applications.',
+      id: 1
     },
     {
       icon: <PremierePro className="text-4xl text-yellow-200 w-[3.5rem]" />,
       label: 'Film Editing',
-      value: 'Cuts and assembles video footage, adding effects and sound to enhance the final story.'
+      value: 'Cuts and assembles video footage, adding effects and sound to enhance the final story.',
+      id: 2
     },
     {
       icon: <Photoshop className="text-4xl text-yellow-200 w-[3.5rem]" />,
       label: 'Graphic Designing',
-      value: 'Creates visual content like logos and layouts to communicate ideas effectively.'
+      value: 'Creates visual content like logos and layouts to communicate ideas effectively.',
+      id: 3
     },
     {
       icon: <Gaming className="text-4xl text-yellow-200 w-[3.5rem]" />,
       label: 'Gaming',
-      value: 'Plays and explores video games to enjoy immersive experiences and achieve in-game goals.'
+      value: 'Plays and explores video games to enjoy immersive experiences and achieve in-game goals.',
+      id: 4
     }
   ]
 
@@ -48,80 +53,96 @@ const About = () => {
       img: '/img/sir-ben.jpg',
       name: 'Ben Louie Casapao',
       position: 'CTO - Innovatto IT Consultancy',
-      value: 'Ryan was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+      value: 'Ryan was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.',
+      id: 1
     },
     {
       img: '/img/sir-zeff.jpg',
       name: 'Zeff Somers',
       position: 'CEO/Founder - Codebility',
-      value: 'Ryan was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+      value: 'Ryan was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.',
+      id: 2
     },
     {
       img: '/img/sir-ben.jpg',
       name: 'Ben Louie Casapao',
       position: 'CTO - Innovatto IT Consultancy',
-      value: 'Ryan was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+      value: 'Ryan was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.',
+      id: 3
     },
     {
       img: '/img/sir-zeff.jpg',
       name: 'Zeff Somers',
       position: 'CEO/Founder - Codebility',
-      value: 'Ryan was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+      value: 'Ryan was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.',
+      id: 4
     },
     {
       img: '/img/sir-ben.jpg',
       name: 'Ben Louie Casapao',
       position: 'CTO - Innovatto IT Consultancy',
-      value: 'Ryan was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+      value: 'Ryan was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.',
+      id: 5
     },
     {
       img: '/img/sir-zeff.jpg',
       name: 'Zeff Somers',
       position: 'CEO/Founder - Codebility',
-      value: 'Ryan was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+      value: 'Ryan was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.',
+      id: 6
     },
   ]
 
   const Clients = [
     {
       icon: <Facebook />,
-      name: 'Facebook'
+      name: 'Facebook',
+      id: 1
     },
     {
       icon: <Amazon />,
-      name: 'Amazon'
+      name: 'Amazon',
+      id: 2
     },
     {
       icon: <Apple />,
-      name: 'Apple'
+      name: 'Apple',
+      id: 3
     },
     {
       icon: <Netflix />,
-      name: 'Netflix'
+      name: 'Netflix',
+      id: 4
     },
     {
       icon: <Google />,
-      name: 'Google'
+      name: 'Google',
+      id: 5
     },
     {
       icon: <Microsoft />,
-      name: 'Microsoft'
+      name: 'Microsoft',
+      id: 6
     },
     {
       icon: <Netflix />,
-      name: 'Netflix'
+      name: 'Netflix',
+      id: 7
     },
     {
       icon: <Microsoft />,
-      name: 'Microsoft'
+      name: 'Microsoft',
+      id: 8
     },
     {
       icon: <Netflix />,
-      name: 'Netflix'
+      name: 'Netflix',
+      id: 9
     },
     {
       icon: <Microsoft />,
-      name: 'Microsoft'
+      name: 'Microsoft',
+      id: 10
     }
   ]
 
@@ -134,18 +155,18 @@ const About = () => {
         <div className='h-1.5 w-12 bg-yellow-200 rounded-3xl'></div>
       </div>
       <div className="text-[var(--text-main)] text-justify text-sm md:text-base">
-        I'm an aspiring web developer passionate about creating awesome digital experiences. Proficient in HTML, CSS, JavaScript, React.js and Next.js, I thrive on solving problems and paying attention to the nitty-gritty details.
+        I&#39;m an aspiring web developer passionate about creating awesome digital experiences. Proficient in HTML, CSS, JavaScript, React.js and Next.js, I thrive on solving problems and paying attention to the nitty-gritty details.
         <br />
         <br />
-        I'm always eager to learn and stay updated on the latest tech trends. With a collaborative spirit and a growth mindset, I'm excited to contribute my skills to innovative projects and continue my journey in the ever-evolving world of web development.
+        I&#39;m always eager to learn and stay updated on the latest tech trends. With a collaborative spirit and a growth mindset, I&#39;m excited to contribute my skills to innovative projects and continue my journey in the ever-evolving world of web development.
       </div>
       <h2 className='text-lg xl:text-xl font-bold mt-4 text-[var(--text-header)]'>
-        What I'm Doing
+        What I&#39;m Doing
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3">
         {/* A reusable component */}
         { WhatImDoing.map((doing) => (
-          <div className="flex gap-3 p-4 rounded-lg shadow-md bg-[#171717] hover:bg-[#252525]">
+          <div key={ doing.id } className="flex gap-3 p-4 rounded-lg shadow-md bg-[#171717] hover:bg-[#252525]">
             { doing.icon }
             <div className="flex flex-col gap-2">
               <div className="font-semibold text-sm lg:text-lg line-clamp-1 hover:line-clamp-none">
@@ -164,7 +185,7 @@ const About = () => {
       <div className="flex justify-start items-center gap-3 w-full overflow-x-auto">
         {/* To be mapped "Testimonials" */}
         { Testimonials.map((review) => (
-          <div className="relative flex flex-shrink-0 justify-between gap-3 p-6 pt-16 rounded-lg shadow-md bg-[#171717] w-full mt-6 xl:w-1/2 2xl:w-1/3 mb-10 cursor-pointer hover:opacity-80"
+          <div key={ review.id } className="relative flex flex-shrink-0 justify-between gap-3 p-6 pt-16 rounded-lg shadow-md bg-[#171717] w-full mt-6 xl:w-1/2 2xl:w-1/3 mb-10 cursor-pointer hover:opacity-80"
             onClick={() => selectedReview ? '' : setSelectedReview(review)}>
             <div className="absolute left-6 top-[-1rem] h-16 w-16 flex justify-between items-end gap-4">
               <Image
@@ -228,7 +249,7 @@ const About = () => {
       <div className="flex justify-start items-center gap-6 w-full overflow-x-auto">
         {/* To be mapped "Clients" */}
         { Clients.map((client) => (
-          <div className="flex justify-between items-center gap-2 w-1/8 p-6 rounded-2xl bg-[#2a2a2a] shadow-sm mb-12">
+          <div key={ client.id } className="flex justify-between items-center gap-2 w-1/8 p-6 rounded-2xl bg-[#2a2a2a] shadow-sm mb-12">
             <div className="text-4xl">
               { client.icon }
             </div>

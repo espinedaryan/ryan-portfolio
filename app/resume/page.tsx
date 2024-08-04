@@ -7,21 +7,24 @@ const Resume = () => {
       company: 'Codebility', 
       duration: 'January 2024 - April 2024',
       technologies: 'Tech Stacks Used: NextJS, TailwindCSS, TypeScript, Git, GitHub',
-      description: 'Developed responsive components to ensure seamless user experiences by collaborating closely with design and development teams and translating mockups into functional web interfaces while maintaining consistency across devices and browsers.'
+      description: 'Developed responsive components to ensure seamless user experiences by collaborating closely with design and development teams and translating mockups into functional web interfaces while maintaining consistency across devices and browsers.',
+      id: 1
     },
     {
       title: 'Game Developer',
       company: 'Westmead International School (Thesis)', 
       duration: 'October 2023 - April 20244',
       technologies: 'Tech Stacks Used: HTML, CSS, JavaScript, Adobe Photoshop, Git, GitHub',
-      description: 'Contributed to the overall game design of a JavaScript learning tool by coding the game logic, developing unique characters, and integrating coding tasks within the tower defense mechanics. Focused on creating an engaging and educational experience, balanced difficulty, and ensured a bug-free game through extensive debugging and testing, while collaborating closely with the team.'
+      description: 'Contributed to the overall game design of a JavaScript learning tool by coding the game logic, developing unique characters, and integrating coding tasks within the tower defense mechanics. Focused on creating an engaging and educational experience, balanced difficulty, and ensured a bug-free game through extensive debugging and testing, while collaborating closely with the team.',
+      id: 2
     },
     {
       title: 'Web Developer - Intern',
       company: 'Innovatto IT Consultancy', 
       duration: 'September 2023 - December 2023',
       technologies: 'Tech Stacks Used: NextJS, CSS, TypeScript, Supabase, Git, GitHub',
-      description: 'Implemented user-friendly and visually appealing frontend designs focused on usability and user experience, and collaborated with team members to integrate frontend and backend components for a cohesive and efficient system.'
+      description: 'Implemented user-friendly and visually appealing frontend designs focused on usability and user experience, and collaborated with team members to integrate frontend and backend components for a cohesive and efficient system.',
+      id: 3
     }
   ]
 
@@ -29,22 +32,26 @@ const Resume = () => {
     {
       school: 'Westmead International School',
       address: 'Alangilan, Batangas City, Batangas',
-      schoolYear: '2020 - 2024'
+      schoolYear: '2020 - 2024',
+      id: 1
     },
     {
       school: 'Dr. Juan A. Pastor Memorial National High School',
       address: 'Talaibon, Ibaan, Batangas',
-      schoolYear: '2014 - 2020'
+      schoolYear: '2014 - 2020',
+      id: 2
     },
     {
       school: 'Ibaan Central School',
       address: 'Poblacion, Ibaan, Batangas',
-      schoolYear: '2013 - 2014'
+      schoolYear: '2013 - 2014',
+      id: 3
     },
     {
       school: 'Our Lady of Grace Formation School',
       address: 'Poblacion, Ibaan, Batangas',
-      schoolYear: '2008 - 2013'
+      schoolYear: '2008 - 2013',
+      id: 4
     }
   ]
 
@@ -67,7 +74,7 @@ const Resume = () => {
           </div>
         </div>
         { RelevantExp.map((exp) => (
-          <div className='relative timeline-item'>
+          <div key={ exp.id } className='relative timeline-item'>
             <h2 className='font-semibold text-[#f2f2f2]'>
               { exp.title }
             </h2>
@@ -97,7 +104,7 @@ const Resume = () => {
           </div>
         </div>
         { Education.map((educ) => (
-          <div className='relative timeline-item'>
+          <div key={ educ.id } className='relative timeline-item'>
             <h2 className='font-semibold text-[#f2f2f2] text-sm xl:text-base'>
               { educ.school }
             </h2>

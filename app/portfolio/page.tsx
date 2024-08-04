@@ -19,15 +19,18 @@ const Portfolio = () => {
   const Filters = [
     {
       name: 'All',
-      action: () => setFilterFocus('All')
+      action: () => setFilterFocus('All'),
+      id: 1
     },
     {
       name: 'Web Development',
-      action: () => setFilterFocus('Web Development')
+      action: () => setFilterFocus('Web Development'),
+      id: 2
     },
     {
       name: 'Application',
-      action: () => setFilterFocus('Application')
+      action: () => setFilterFocus('Application'),
+      id: 3
     }
   ]
 
@@ -118,7 +121,7 @@ const Portfolio = () => {
       </div>
       <div className='flex gap-4'>
         { Filters.map((filter) => (
-          <div className={`${filterFocus === filter.name && 'text-yellow-200'} text-[var(--text-main)] cursor-pointer hover:opacity-80`} onClick={ filter.action }>
+          <div key={ filter.id } className={`${filterFocus === filter.name && 'text-yellow-200'} text-[var(--text-main)] cursor-pointer hover:opacity-80`} onClick={ filter.action }>
             { filter.name }
           </div>
         )) }
@@ -126,7 +129,7 @@ const Portfolio = () => {
       {/* Projects Display */}
       <div className="grid sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 gap-8 w-full">
         { FilteredProjects.map((project) => (
-          <div className="scale-up-animation group flex flex-col gap-4 cursor-pointer">
+          <div key={ project.id } className="scale-up-animation group flex flex-col gap-4 cursor-pointer">
             <div className="relative w-full h-[10rem] overflow-hidden rounded-xl">
               <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] gap-6 flex opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 ease-in-out z-10">
                 <Link href={ project.github } target="_blank" className="flex justify-center items-center h-12 w-12 bg-[#272727] rounded-md active:bg-[#3a3a3a] shadow-sm border border-[#303030]">
